@@ -3,9 +3,12 @@ import NewsItem from "../newsItem/NewsItem";
 import sampleOutput from "../../sampleOutput.json";
 import Spinner from "../Spinner/Spinner";
 import PropTypes from 'prop-types';
+import InfiniteScroll from "react-infinite-scroll-component";
+
 
 export class News extends Component {
   articles = sampleOutput;
+  apiKey=process.env.REACT_APP_NEWSAPIKEY
 
   static defaultProps = {
     pageSize: 10,
@@ -23,24 +26,34 @@ export class News extends Component {
   capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
-
+  
   constructor(props) {
     super(props);
-    this.state = { articles: this.articles.articles, page: 1, totalNewsCount: this.articles.totalResults, loading: true};
+    this.state = { articles: this.articles.articles, page: 1, totalNewsCount: 0, loading: true};
     const {category} =this.props
     document.title = `${category ? this.capitalizeFirstLetter(category) : null} - InTheNews`;
   }
+  
+  componentDidMount() {
+    // this.setState({loading: false}) //note: temporary, just to check with dummy data
+    
+    this.getTheNews()
+  }
+
 
   getTheNews = async () => {
-    const {pageSize, country, category} = this.props
+    const {pageSize, country, category, progressBar} = this.props
     
-    const url =
-      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=1bf5d4e25cf8448dbb1db0bdc22cc628&page=${this.state.page}&pageSize=${pageSize}`;
+    progressBar(10)
+    const url=`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${this.apiKey}&page=${this.state.page}&pageSize=${pageSize}`
     const data = await fetch(url);
+    progressBar(50)
     const parsedData = await data.json();
+    progressBar(85)
     if(parsedData){
       this.setState({ articles: parsedData.articles, totalNewsCount: parsedData.totalResults, loading: false });
     }
+    progressBar(100)
   };
 
   previousPageHandler = () => {
@@ -48,7 +61,7 @@ export class News extends Component {
     if (page > 1) {
       console.log("prev page")
       this.setState({  page: page - 1, loading: true, });
-      // this.getTheNews()
+      this.getTheNews()
     }
   };
 
@@ -63,14 +76,27 @@ export class News extends Component {
     }
   };
 
-  componentDidMount() {
-    // this.setState({loading: false}) //note: temporary, just to check with dummy data
-    
-    this.getTheNews()
+  getMoreNews = async () => {
+    const {pageSize, country, category} = this.props
+    const {articles} = this.state
+    const url =
+      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${this.apiKey}&page=${this.state.page}&pageSize=${pageSize}`;
+    const data = await fetch(url);
+    const parsedData = await data.json();
+    if(parsedData){
+      this.setState({ articles: articles.concat(parsedData.articles)});
+    }
   }
 
+  fetchMoreData = () => {
+    let { page } = this.state;
+    this.setState({ page: page + 1 });
+    this.getMoreNews()
+  }
+
+
   render() {
-    const {page, totalNewsCount, loading} = this.state
+    const {page, totalNewsCount, loading, articles} = this.state
     const {pageSize, category} = this.props
     const buttonDisableCondition = Math.ceil(totalNewsCount/pageSize >= page)
   
@@ -80,8 +106,15 @@ export class News extends Component {
          {loading ?  <div><Spinner/></div>:
        
        <div>
-        <div className="row">
-        
+
+        <InfiniteScroll
+          dataLength={this.state.articles.length}
+          next={this.fetchMoreData}
+          hasMore={articles.length !== totalNewsCount}
+          loader={<Spinner/>}
+        >
+
+         <div className="row">
           {!this.state.loading && this.state.articles.map((newsItem) => (
             <div key={newsItem.url} className="col-md-4">
               <NewsItem
@@ -97,6 +130,8 @@ export class News extends Component {
             </div>
           ))}
         </div>
+        </InfiniteScroll>
+        
         <div className="d-flex justify-content-between">
           <button type="button" className="btn btn-outline-dark" disabled={Math.ceil(page <=1) ? true : false} onClick={this.previousPageHandler}>
             &#x21FD; Previous

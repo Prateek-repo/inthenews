@@ -19,16 +19,23 @@ export class News extends Component {
     category: PropTypes.string
   }
   // this.articles.articles
-  constructor() {
-    super();
+
+  capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+  constructor(props) {
+    super(props);
     this.state = { articles: this.articles.articles, page: 1, totalNewsCount: this.articles.totalResults, loading: true};
+    const {category} =this.props
+    document.title = `${category ? this.capitalizeFirstLetter(category) : null} - InTheNews`;
   }
 
   getTheNews = async () => {
     const {pageSize, country, category} = this.props
     
     const url =
-      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=&page=${this.state.page}&pageSize=${pageSize}`;
+      `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=1bf5d4e25cf8448dbb1db0bdc22cc628&page=${this.state.page}&pageSize=${pageSize}`;
     const data = await fetch(url);
     const parsedData = await data.json();
     if(parsedData){
@@ -64,12 +71,12 @@ export class News extends Component {
 
   render() {
     const {page, totalNewsCount, loading} = this.state
-    const {pageSize} = this.props
+    const {pageSize, category} = this.props
     const buttonDisableCondition = Math.ceil(totalNewsCount/pageSize >= page)
   
     return (
-      <div className="container my-3">
-        <h2>Top Headlines</h2>
+      <div className="container my-3"  >
+        <h2>Top Headlines: {category ? this.capitalizeFirstLetter(category) : null}</h2>
          {loading ?  <div><Spinner/></div>:
        
        <div>

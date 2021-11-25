@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import InfiniteScroll from "react-infinite-scroll-component";
 
 
+
 export class News extends Component {
   articles = sampleOutput;
   apiKey=process.env.REACT_APP_NEWSAPIKEY
@@ -35,11 +36,10 @@ export class News extends Component {
   }
   
   componentDidMount() {
-    // this.setState({loading: false}) //note: temporary, just to check with dummy data
+    this.setState({loading: false}) //note: temporary, just to check with dummy data
     
-    this.getTheNews()
+    // this.getTheNews()
   }
-
 
   getTheNews = async () => {
     const {pageSize, country, category, progressBar} = this.props
@@ -50,7 +50,7 @@ export class News extends Component {
     progressBar(50)
     const parsedData = await data.json();
     progressBar(85)
-    if(parsedData){
+    if(parsedData && parsedData.length > 0){
       this.setState({ articles: parsedData.articles, totalNewsCount: parsedData.totalResults, loading: false });
     }
     progressBar(100)
@@ -97,12 +97,16 @@ export class News extends Component {
 
   render() {
     const {page, totalNewsCount, loading, articles} = this.state
-    const {pageSize, category} = this.props
+    const {pageSize, category, darkMode} = this.props
     const buttonDisableCondition = Math.ceil(totalNewsCount/pageSize >= page)
   
     return (
-      <div className="container my-3"  >
-        <h2>Top Headlines: {category ? this.capitalizeFirstLetter(category) : null}</h2>
+      
+      <div className="container my-3" style={{backgroundColor: darkMode ? "black" : null}}>
+
+
+
+        <h2 style={{marginTop: '56px', color:darkMode ? "gray" : null}}>Top Headlines: {category ? this.capitalizeFirstLetter(category) : null}</h2>
          {loading ?  <div><Spinner/></div>:
        
        <div>
@@ -125,7 +129,7 @@ export class News extends Component {
                 author={newsItem.author}
                 publishedAt={newsItem.publishedAt}
                 sourceName={newsItem.source.name}
-                
+                darkMode = {darkMode}
               />
             </div>
           ))}

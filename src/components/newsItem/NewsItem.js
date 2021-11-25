@@ -10,7 +10,12 @@ export class NewsItem extends Component {
       publishedAt,
       author,
       sourceName,
+      darkMode
     } = this.props;
+
+    const cardFontsColor = {color:darkMode ? "gray" : null}
+
+    const darkModeButton = `btn btn-sm btn-outline-${darkMode ? "light" : "dark"}`
 
     //   const date = new Date(publishedAt).toISOString
     return (
@@ -18,7 +23,7 @@ export class NewsItem extends Component {
         <div className="card">
           <div style={{display:"flex", justifyContent: "flex-end", position: "absolute", right: "0"}}>
           <span
-            class="badge rounded-pill bg-danger"
+            className="badge rounded-pill bg-danger"
             
           >
             {sourceName}
@@ -31,11 +36,11 @@ export class NewsItem extends Component {
             height="200"
             width="200"
           />
-          <div className="card-body">
-            <h5 className="card-title">
+          <div className="card-body" style={{backgroundColor: darkMode ? "black" : null}}>
+            <h5 className="card-title" style={cardFontsColor}>
               {title.length > 50 && title ? `${title.slice(0, 50)}...` : title}
             </h5>
-            <p className="card-text">
+            <p className="card-text" style={cardFontsColor}>
               {description
                 ? description.length > 70
                   ? `${description.slice(0, 70)}...`
@@ -55,7 +60,7 @@ export class NewsItem extends Component {
               href={newsUrl}
               target="_blank"
               rel="noreferrer"
-              className="btn btn-sm btn-outline-dark"
+              className={darkModeButton}
             >
               Read More...
             </a>

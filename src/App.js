@@ -13,8 +13,11 @@ import LoadingBar from 'react-top-loading-bar'
 export default class App extends Component {
 
   state={
-    progress: 0
+    progress: 0,
+    country: "in",
+    darkModeStatus: false
   }
+
 
   setProgress = (theBarProgress) => {
     this.setState({
@@ -22,16 +25,26 @@ export default class App extends Component {
     })
   }
 
+  setCountry = (country) => {
+    console.log("dfd", country)
+    this.setState({country: country})
+  }
+
+  darkModeEnable = () => {
+    this.setState({darkModeStatus: !this.state.darkModeStatus})
+      }
+
+  routeElement = (category, key) => {
+    const { country, darkModeStatus} = this.state
+    return (<News progressBar={this.setProgress} key={key === "/" ? "general" : key} pageSize={6} country={country} category={category === "/" ? "general" : category} darkMode={darkModeStatus}/>)
+  }
 
   render() {
-    const {progress} = this.state
-    const routeElement = (category) => {
-      return (<News progressBar={this.setProgress} key={category === "/" ? "general" : category} pageSize={6} country="in" category={category === "/" ? "general" : category}/>)
-    }
+    const {progress, category, darkModeStatus} = this.state
     return (
-      <div>
+      <div style={{backgroundColor: darkModeStatus ? "black" : null}}>
         <Router>
-        <NavBar/>
+        <NavBar setTheCountry={this.setCountry} category={category} darkMode={this.darkModeEnable}/>
         <LoadingBar
         color='#f11946'
         progress={progress}
@@ -40,14 +53,14 @@ export default class App extends Component {
         onLoaderFinished={() => this.setProgress(0)}
       />
           <Routes>
-          <Route exact path="/" element={routeElement("/")}/>
-          <Route exact path="/general" element={routeElement("general")}/>
-          <Route exact path="/health" element={routeElement("health")}/>
-          <Route exact path="/business" element={routeElement("business")}/>
-          <Route exact path="/entertainment" element={routeElement("entertainment")}/>
-          <Route exact path="/sports" element={routeElement("sports")}/>
-          <Route exact path="/technology" element={routeElement("technology")}/>
-          <Route exact path="/science" element={routeElement("science")}/>
+          <Route exact path="/" element={this.routeElement("/", "/")}/>
+          <Route exact path="/general" element={this.routeElement("general", "general")}/>
+          <Route exact path="/health" element={this.routeElement("health", "health")}/>
+          <Route exact path="/business" element={this.routeElement("business", "business")}/>
+          <Route exact path="/entertainment" element={this.routeElement("entertainment", "entertainment")}/>
+          <Route exact path="/sports" element={this.routeElement("sports", "sports")}/>
+          <Route exact path="/technology" element={this.routeElement("technology", "technology")}/>
+          <Route exact path="/science" element={this.routeElement("science", "science")}/>
           </Routes>
        
        

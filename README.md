@@ -1,3 +1,40 @@
+# Getting Started with the project
+
+Download/Clone the file to your local environment.
+
+Run yarn install
+
+Make an account in NewsAPI and generate the API key.
+
+Make one file named as '.env.local' in the root folder and write the API key using REACT_APP_NEWSAPIKEY="yourAPIKey", save it.
+
+Run yarn start in the root file.
+
+Go to: http://localhost:3000/ to interact with the App.
+
+# Technologies used
+
+### React v17
+### Bootstrap v5
+### News API
+
+# Features
+
+## Search news categories
+## Search news by countires (up to 52)
+## Infinite Scroll in the news
+## Dark mode
+## Responsive Design
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

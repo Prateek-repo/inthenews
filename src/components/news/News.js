@@ -26,7 +26,7 @@ export class News extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      articles: this.articles.articles,
+      articles: [],
       page: 1,
       totalNewsCount: 0,
       loading: true,
@@ -43,9 +43,9 @@ export class News extends Component {
 
   getTheNews = async () => {
     const { pageSize, country, category, progressBar } = this.props;
-
+    const { page } = this.state;
     progressBar(10);
-    const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${this.apiKey}&page=${this.state.page}&pageSize=${pageSize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${this.apiKey}&page=${page}&pageSize=${pageSize}`;
     const data = await fetch(url);
     progressBar(50);
     const parsedData = await data.json();
@@ -62,8 +62,8 @@ export class News extends Component {
 
   getMoreNews = async () => {
     const { pageSize, country, category } = this.props;
-    const { articles } = this.state;
-    const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${this.apiKey}&page=${this.state.page}&pageSize=${pageSize}`;
+    const { articles, page } = this.state;
+    const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${this.apiKey}&page=${page}&pageSize=${pageSize}`;
     const data = await fetch(url);
     const parsedData = await data.json();
     if (parsedData) {
@@ -96,14 +96,14 @@ export class News extends Component {
           </div>
         ) : (
           <InfiniteScroll
-            dataLength={this.state.articles.length}
+            dataLength={articles.length}
             next={this.fetchMoreData}
             hasMore={articles.length !== totalNewsCount}
             loader={<Spinner />}
           >
             <div className="row">
-              {!this.state.loading &&
-                this.state.articles.map((newsItem) => (
+              {loading &&
+                articles.map((newsItem) => (
                   <div key={newsItem.url} className="col-md-4">
                     <NewsItem
                       title={newsItem.title}

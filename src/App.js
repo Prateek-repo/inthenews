@@ -24,7 +24,8 @@ export default class App extends Component {
   };
 
   darkModeEnable = () => {
-    this.setState({ darkModeStatus: !this.state.darkModeStatus });
+    const { darkModeStatus } = this.state;
+    this.setState({ darkModeStatus: !darkModeStatus });
   };
 
   routeElement = (category, key) => {

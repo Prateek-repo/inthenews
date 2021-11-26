@@ -12,20 +12,22 @@ export class NavBar extends Component {
     };
   }
 
-
   handleChange = (selectedOption) => {
+    const { setTheCountry } = this.props;
     this.setState({ selectedOption: selectedOption });
-    this.props.setTheCountry(selectedOption.value);
+    setTheCountry(selectedOption.value);
   };
 
   darkModeEnable = () => {
-    this.setState({ darkModeStatus: !this.state.darkModeStatus });
-    this.props.darkMode();
+    const { darkMode } = this.props;
+    const { darkModeStatus } = this.state;
+    this.setState({ darkModeStatus: !darkModeStatus });
+    darkMode();
   };
 
   render() {
-    const { selectedOption } = this.state;
-    const mode = this.state.darkModeStatus ? "dark" : "light";
+    const { selectedOption, darkModeStatus } = this.state;
+    const mode = darkModeStatus ? "dark" : "light";
     const navClasses = `navbar fixed-top navbar-expand-lg navbar-${mode} bg-${mode}`;
     return (
       <div>
@@ -99,14 +101,10 @@ export class NavBar extends Component {
                 <li className="nav-item" style={{ marginLeft: "32px" }}>
                   <button
                     type="button"
-                    class={`btn-sm btn-${
-                      !this.state.darkModeStatus ? "dark" : "light"
-                    }`}
+                    class={`btn-sm btn-${!darkModeStatus ? "dark" : "light"}`}
                     onClick={this.darkModeEnable}
                   >
-                    {this.state.darkModeStatus
-                      ? "Go Light Mode"
-                      : "Go Dark Mode"}
+                    {darkModeStatus ? "Go Light Mode" : "Go Dark Mode"}
                   </button>
                 </li>
               </ul>

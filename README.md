@@ -25,90 +25,40 @@ Go to: http://localhost:3000/ to interact with the App.
 ![Capture](https://user-images.githubusercontent.com/63186643/143578990-6b9f6221-acf1-4589-9834-40e027a8ce26.PNG)
 
 
-### Search news by countires (up to 52)
+![Capture](https://user-images.githubusercontent.com/63186643/143579291-4180bcf7-a34c-4b81-9f2e-9ee5edd30fed.PNG)
+
+
+### Search news by countires (up to 52 countries)
+
+![Capture](https://user-images.githubusercontent.com/63186643/143579528-e036ee74-92ae-407a-8199-cec79d8583bf.PNG)
+
+![Capture](https://user-images.githubusercontent.com/63186643/143579884-9dc777d0-e081-44f4-b6ab-8e86d9072bcf.PNG)
+
 
 ### Infinite Scroll in the news
 
+![Screenshot (2296)](https://user-images.githubusercontent.com/63186643/143580515-ea384d19-d570-4ec7-8720-45b74c0d494d.png)
+
+
 ### Dark mode
+
+![Capture](https://user-images.githubusercontent.com/63186643/143580748-3afb2966-2c2b-4bb6-a1c9-44f209e73446.PNG)
+
+![Capture](https://user-images.githubusercontent.com/63186643/143580841-1c84c28e-466e-4f0a-8383-91ba1a60eaab.PNG)
+
 
 ### Responsive Design
 
 
+![localhost_3000_health(iPhone 6_7_8 Plus)](https://user-images.githubusercontent.com/63186643/143582738-86bce5be-bc77-4e7d-a60f-5646a8bf5de1.png)
 
 
+![localhost_3000_health(iPhone 6_7_8 Plus) (1)](https://user-images.githubusercontent.com/63186643/143582749-7c4be6c6-2f54-499b-8c44-7331ba503420.png)
 
 
+![localhost_3000_health(iPad)](https://user-images.githubusercontent.com/63186643/143582757-4cb245c9-53aa-4501-bef8-14ec2ca2569d.png)
 
 
+![localhost_3000_health(iPad) (1)](https://user-images.githubusercontent.com/63186643/143582768-37220f92-bd3a-4dc8-a86e-aa0aacac815f.png)
 
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

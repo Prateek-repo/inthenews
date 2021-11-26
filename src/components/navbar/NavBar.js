@@ -12,25 +12,10 @@ export class NavBar extends Component {
     };
   }
 
-  countryList = [
-    {
-      label: "India",
-      value: "in",
-    },
-    {
-      label: "USA",
-      value: "us",
-    },
-    {
-      label: "Great Britain",
-      value: "gb",
-    },
-  ];
 
   handleChange = (selectedOption) => {
     this.setState({ selectedOption: selectedOption });
     this.props.setTheCountry(selectedOption.value);
-    console.log(`Option selected:`, selectedOption);
   };
 
   darkModeEnable = () => {

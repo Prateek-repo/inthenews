@@ -15,7 +15,9 @@ Go to: http://localhost:3000/ to interact with the App.
 # Technologies used
 
 **React v17**
+
 **Bootstrap v5**
+
 **News API**
 
 # Features

@@ -52,7 +52,7 @@ Go to: http://localhost:3000/ to interact with the App.
 ## Responsive Design
 
 
-![localhost_3000_health(iPhone 6_7_8 Plus)](https://user-images.githubusercontent.com/63186643/143582738-86bce5be-bc77-4e7d-a60f-5646a8bf5de1.png =250X150)
+![localhost_3000_health(iPhone 6_7_8 Plus)](https://user-images.githubusercontent.com/63186643/143582738-86bce5be-bc77-4e7d-a60f-5646a8bf5de1.png | width=100)
 
 
 ![localhost_3000_health(iPhone 6_7_8 Plus) (1)](https://user-images.githubusercontent.com/63186643/143582749-7c4be6c6-2f54-499b-8c44-7331ba503420.png)

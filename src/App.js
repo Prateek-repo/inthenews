@@ -19,7 +19,6 @@ export default class App extends Component {
   };
 
   setCountry = (country) => {
-    console.log("dfd", country);
     this.setState({ country: country });
   };
 

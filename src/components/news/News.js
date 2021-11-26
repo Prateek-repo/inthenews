@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import NewsItem from "../newsItem/NewsItem";
 import Spinner from "../Spinner/Spinner";
 import PropTypes from "prop-types";
@@ -41,6 +41,12 @@ export class News extends Component {
     this.getTheNews();
   }
 
+  componentDidUpdate(prevProps){
+    if(this.props.country !== prevProps.country){
+      this.getTheNews()
+    }
+  }
+
   getTheNews = async () => {
     const { pageSize, country, category, progressBar } = this.props;
     const { page } = this.state;
@@ -50,7 +56,7 @@ export class News extends Component {
     progressBar(50);
     const parsedData = await data.json();
     progressBar(85);
-    if (parsedData && parsedData.length > 0) {
+    if (parsedData) {
       this.setState({
         articles: parsedData.articles,
         totalNewsCount: parsedData.totalResults,
@@ -82,11 +88,10 @@ export class News extends Component {
     const { category, darkMode } = this.props;
 
     return (
-      <div
-        className="container my-3"
+      <Fragment
         style={{ backgroundColor: darkMode ? "black" : null }}
       >
-        <h2 style={{ marginTop: "56px", color: darkMode ? "gray" : null }}>
+        <h2 className="text-center" style={{ marginTop: "56px", color: darkMode ? "gray" : null, }}>
           Top Headlines:{" "}
           {category ? this.capitalizeFirstLetter(category) : null}
         </h2>
@@ -101,8 +106,9 @@ export class News extends Component {
             hasMore={articles.length !== totalNewsCount}
             loader={<Spinner />}
           >
+            <div className="container">
             <div className="row">
-              {loading &&
+              {!loading &&
                 articles.map((newsItem) => (
                   <div key={newsItem.url} className="col-md-4">
                     <NewsItem
@@ -118,9 +124,10 @@ export class News extends Component {
                   </div>
                 ))}
             </div>
+            </div>
           </InfiniteScroll>
         )}
-      </div>
+      </Fragment>
     );
   }
 }

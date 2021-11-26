@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../logo.png";
 import Select from "react-select";
+import countryList from "../../assets/CountryList";
 
 export class NavBar extends Component {
   constructor() {
@@ -95,13 +96,13 @@ export class NavBar extends Component {
                   <Select
                     value={selectedOption}
                     onChange={this.handleChange}
-                    options={this.countryList}
+                    options={countryList}
                   />
                 </li>
                 <li className="nav-item" style={{ marginLeft: "32px" }}>
                   <button
                     type="button"
-                    class={`btn-sm btn-${!darkModeStatus ? "dark" : "light"}`}
+                    className={`btn-sm btn-${!darkModeStatus ? "dark" : "light"}`}
                     onClick={this.darkModeEnable}
                   >
                     {darkModeStatus ? "Go Light Mode" : "Go Dark Mode"}

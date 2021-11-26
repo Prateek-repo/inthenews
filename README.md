@@ -24,7 +24,7 @@ Go to: http://localhost:3000/ to interact with the App.
 
 ## Search news categories
 
-![Capture](https://user-images.githubusercontent.com/63186643/143578990-6b9f6221-acf1-4589-9834-40e027a8ce26.PNG)
+<img src='https://user-images.githubusercontent.com/63186643/143578990-6b9f6221-acf1-4589-9834-40e027a8ce26.PNG' height="200" width="250"/>
 
 
 ![Capture](https://user-images.githubusercontent.com/63186643/143579291-4180bcf7-a34c-4b81-9f2e-9ee5edd30fed.PNG)

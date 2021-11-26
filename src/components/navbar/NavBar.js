@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../logo.png";
 import Select from "react-select";
-
+import countryList from "../../assets/CountryList"
 export class NavBar extends Component {
   constructor() {
     super();
@@ -12,20 +12,7 @@ export class NavBar extends Component {
     };
   }
 
-  countryList = [
-    {
-      label: "India",
-      value: "in",
-    },
-    {
-      label: "USA",
-      value: "us",
-    },
-    {
-      label: "Great Britain",
-      value: "gb",
-    },
-  ];
+  
 
   handleChange = (selectedOption) => {
     this.setState({ selectedOption: selectedOption });
@@ -104,11 +91,12 @@ export class NavBar extends Component {
               </ul>
 
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
+                <li className="nav-item"x>
                   <Select
                     value={selectedOption}
                     onChange={this.handleChange}
-                    options={this.countryList}
+                    options={countryList}
+                   
                   />
                 </li>
                 <li className="nav-item" style={{ marginLeft: "32px" }}>

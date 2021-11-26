@@ -41,9 +41,16 @@ export class News extends Component {
     // this.getTheNews()
   }
 
+  componentDidUpdate(prevProps){
+    if(this.props.country !== prevProps.country){
+      // this.getTheNews()
+    }
+  }
+
   getTheNews = async () => {
     const {pageSize, country, category, progressBar} = this.props
-    
+    console.log("changed country", country)
+    console.log("changed category", category)
     progressBar(10)
     const url=`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${this.apiKey}&page=${this.state.page}&pageSize=${pageSize}`
     const data = await fetch(url);

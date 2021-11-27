@@ -78,8 +78,8 @@ Go to: http://localhost:3000/ to interact with the App.
   
   identity-obj-proxy (to help to mock the .png, css files etc while testing + created a fileMock.js file + added jest ModuleNameMapper for this.)
   
-  created babel.config.js file to solve 'jsx' issue  (<a href= https://stackoverflow.com/questions/63005011/support-for-the-experimental-syntax-jsx-isnt-currently-enabled'> Support for the experimental syntax 'jsx' isn't currently enabled
-</a>)
+  created babel.config.js file to solve 'jsx' issue  (https://stackoverflow.com/questions/63005011/support-for-the-experimental-syntax-jsx-isnt-currently-enabled'> Support for )
+  
  @wojtekmaj/enzyme-adapter-react-17 for adapter in react 17
  
  ### Useful testing link

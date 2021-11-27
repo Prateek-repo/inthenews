@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<News/> SnapShot creation 1`] = `
+<Fragment>
+  <h2
+    className="text-center"
+    style={
+      Object {
+        "color": null,
+        "marginTop": "56px",
+      }
+    }
+  >
+    Top Headlines:
+     
+    General
+  </h2>
+  <div>
+    <Spinner />
+  </div>
+</Fragment>
+`;

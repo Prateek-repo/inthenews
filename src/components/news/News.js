@@ -41,9 +41,9 @@ export class News extends Component {
     this.getTheNews();
   }
 
-  componentDidUpdate(prevProps){
-    if(this.props.country !== prevProps.country){
-      this.getTheNews()
+  componentDidUpdate(prevProps) {
+    if (this.props.country !== prevProps.country) {
+      this.getTheNews();
     }
   }
 
@@ -86,12 +86,15 @@ export class News extends Component {
   render() {
     const { totalNewsCount, loading, articles } = this.state;
     const { category, darkMode } = this.props;
+    
+    // style={{ backgroundColor: darkMode ? "black" : null }}
 
     return (
-      <Fragment
-        style={{ backgroundColor: darkMode ? "black" : null }}
-      >
-        <h2 className="text-center" style={{ marginTop: "56px", color: darkMode ? "gray" : null, }}>
+      <Fragment>
+        <h2
+          className="text-center"
+          style={{ marginTop: "56px", color: darkMode ? "gray" : null }}
+        >
           Top Headlines:{" "}
           {category ? this.capitalizeFirstLetter(category) : null}
         </h2>
@@ -107,23 +110,23 @@ export class News extends Component {
             loader={<Spinner />}
           >
             <div className="container">
-            <div className="row">
-              {!loading &&
-                articles.map((newsItem) => (
-                  <div key={newsItem.url} className="col-md-4">
-                    <NewsItem
-                      title={newsItem.title}
-                      description={newsItem.description}
-                      imgUrl={newsItem.urlToImage}
-                      newsUrl={newsItem.url}
-                      author={newsItem.author}
-                      publishedAt={newsItem.publishedAt}
-                      sourceName={newsItem.source.name}
-                      darkMode={darkMode}
-                    />
-                  </div>
-                ))}
-            </div>
+              <div className="row">
+                {!loading &&
+                  articles.map((newsItem) => (
+                    <div key={newsItem.url} className="col-md-4">
+                      <NewsItem
+                        title={newsItem.title}
+                        description={newsItem.description}
+                        imgUrl={newsItem.urlToImage}
+                        newsUrl={newsItem.url}
+                        author={newsItem.author}
+                        publishedAt={newsItem.publishedAt}
+                        sourceName={newsItem.source.name}
+                        darkMode={darkMode}
+                      />
+                    </div>
+                  ))}
+              </div>
             </div>
           </InfiniteScroll>
         )}

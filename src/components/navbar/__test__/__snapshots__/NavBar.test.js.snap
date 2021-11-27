@@ -1,0 +1,361 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavBar/> SnapShot creation 1`] = `
+<div>
+  <nav
+    className="navbar fixed-top navbar-expand-lg navbar-light bg-light"
+  >
+    <div
+      className="container-fluid"
+    >
+      <Link
+        className="navbar-brand nav-link"
+        to="/general"
+      >
+        <img
+          alt=""
+          height="24"
+          src=""
+          width="30"
+        />
+         
+        <b>
+          InTheNews
+        </b>
+      </Link>
+      <button
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        className="navbar-toggler"
+        data-bs-target="#navbarSupportedContent"
+        data-bs-toggle="collapse"
+        type="button"
+      >
+        <span
+          className="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        className="collapse navbar-collapse"
+        id="navbarSupportedContent"
+      >
+        <ul
+          className="navbar-nav me-auto mb-2 mb-lg-0"
+        >
+          <li
+            className="nav-item"
+          >
+            <Link
+              className="nav-link"
+              to="/general"
+            >
+              General
+            </Link>
+          </li>
+          <li
+            className="nav-item"
+          >
+            <Link
+              className="nav-link"
+              to="/health"
+            >
+              Health
+            </Link>
+          </li>
+          <li
+            className="nav-item"
+          >
+            <Link
+              className="nav-link"
+              to="/business"
+            >
+              Business
+            </Link>
+          </li>
+          <li
+            className="nav-item"
+          >
+            <Link
+              className="nav-link"
+              to="/entertainment"
+            >
+              Entertainment
+            </Link>
+          </li>
+          <li
+            className="nav-item"
+          >
+            <Link
+              className="nav-link"
+              to="/sports"
+            >
+              Sports
+            </Link>
+          </li>
+          <li
+            className="nav-item"
+          >
+            <Link
+              className="nav-link"
+              to="/technology"
+            >
+              Technology
+            </Link>
+          </li>
+          <li
+            className="nav-item"
+          >
+            <Link
+              className="nav-link"
+              to="/science"
+            >
+              Science
+            </Link>
+          </li>
+        </ul>
+        <ul
+          className="navbar-nav me-auto mb-2 mb-lg-0"
+        >
+          <li
+            className="nav-item"
+          >
+            <ForwardRef
+              onChange={[Function]}
+              options={
+                Array [
+                  Object {
+                    "label": "India",
+                    "value": "in",
+                  },
+                  Object {
+                    "label": "USA",
+                    "value": "us",
+                  },
+                  Object {
+                    "label": "United Kingdom",
+                    "value": "gb",
+                  },
+                  Object {
+                    "label": "United Arab Emirates",
+                    "value": "ae",
+                  },
+                  Object {
+                    "label": "Argentina",
+                    "value": "ar",
+                  },
+                  Object {
+                    "label": "Austria",
+                    "value": "at",
+                  },
+                  Object {
+                    "label": "Australia",
+                    "value": "au",
+                  },
+                  Object {
+                    "label": "Belgium",
+                    "value": "be",
+                  },
+                  Object {
+                    "label": "Bulgaria",
+                    "value": "bg",
+                  },
+                  Object {
+                    "label": "Brazil",
+                    "value": "br",
+                  },
+                  Object {
+                    "label": "Canada",
+                    "value": "ca",
+                  },
+                  Object {
+                    "label": "Switzerland",
+                    "value": "ch",
+                  },
+                  Object {
+                    "label": "China",
+                    "value": "cn",
+                  },
+                  Object {
+                    "label": "Colombia",
+                    "value": "co",
+                  },
+                  Object {
+                    "label": "Cuba",
+                    "value": "cu",
+                  },
+                  Object {
+                    "label": "Czech Republic",
+                    "value": "cz",
+                  },
+                  Object {
+                    "label": "Germany",
+                    "value": "de",
+                  },
+                  Object {
+                    "label": "Egypt",
+                    "value": "eg",
+                  },
+                  Object {
+                    "label": "France",
+                    "value": "fr",
+                  },
+                  Object {
+                    "label": "Greece",
+                    "value": "gr",
+                  },
+                  Object {
+                    "label": "Hong Kong",
+                    "value": "hk",
+                  },
+                  Object {
+                    "label": "Hungary",
+                    "value": "hu",
+                  },
+                  Object {
+                    "label": "Indonesia",
+                    "value": "id",
+                  },
+                  Object {
+                    "label": "Ireland",
+                    "value": "ie",
+                  },
+                  Object {
+                    "label": "Israel",
+                    "value": "il",
+                  },
+                  Object {
+                    "label": "Japan",
+                    "value": "jp",
+                  },
+                  Object {
+                    "label": "South Korea",
+                    "value": "kr",
+                  },
+                  Object {
+                    "label": "Lithuania",
+                    "value": "lt",
+                  },
+                  Object {
+                    "label": "Latvia",
+                    "value": "lv",
+                  },
+                  Object {
+                    "label": "Morocco",
+                    "value": "ma",
+                  },
+                  Object {
+                    "label": "Mexico",
+                    "value": "mx",
+                  },
+                  Object {
+                    "label": "Nigeria",
+                    "value": "ng",
+                  },
+                  Object {
+                    "label": "Netherlands",
+                    "value": "nl",
+                  },
+                  Object {
+                    "label": "Norway",
+                    "value": "no",
+                  },
+                  Object {
+                    "label": "New Zealand",
+                    "value": "nz",
+                  },
+                  Object {
+                    "label": "Philippines",
+                    "value": "ph",
+                  },
+                  Object {
+                    "label": "Poland",
+                    "value": "pl",
+                  },
+                  Object {
+                    "label": "Portugal",
+                    "value": "pt",
+                  },
+                  Object {
+                    "label": "Romania",
+                    "value": "ro",
+                  },
+                  Object {
+                    "label": "Serbia",
+                    "value": "rs",
+                  },
+                  Object {
+                    "label": "Russia",
+                    "value": "ru",
+                  },
+                  Object {
+                    "label": "Saudi Arabia",
+                    "value": "sa",
+                  },
+                  Object {
+                    "label": "Sweden",
+                    "value": "se",
+                  },
+                  Object {
+                    "label": "Singapore",
+                    "value": "sg",
+                  },
+                  Object {
+                    "label": "Slovenia",
+                    "value": "si",
+                  },
+                  Object {
+                    "label": "Slovakia",
+                    "value": "sk",
+                  },
+                  Object {
+                    "label": "Thailand",
+                    "value": "th",
+                  },
+                  Object {
+                    "label": "Turkey",
+                    "value": "tr",
+                  },
+                  Object {
+                    "label": "Taiwan",
+                    "value": "tw",
+                  },
+                  Object {
+                    "label": "Ukraine",
+                    "value": "ua",
+                  },
+                  Object {
+                    "label": "Venezuela",
+                    "value": "ve",
+                  },
+                  Object {
+                    "label": "South Africa",
+                    "value": "za",
+                  },
+                ]
+              }
+              value="World"
+            />
+          </li>
+          <li
+            className="nav-item"
+            style={
+              Object {
+                "marginLeft": "32px",
+              }
+            }
+          >
+            <button
+              className="btn-sm btn-dark"
+              onClick={[Function]}
+              type="button"
+            >
+              Go Dark Mode
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+`;

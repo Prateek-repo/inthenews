@@ -1,4 +1,3 @@
-import "./App.css";
 import React, { Component } from "react";
 import NavBar from "./components/navbar/NavBar";
 import News from "./components/news/News";
@@ -33,7 +32,7 @@ export default class App extends Component {
       <News
         progressBar={this.setProgress}
         key={key === "/" ? "general" : key}
-        pageSize={6}
+        pageSize={20}
         country={country}
         category={category === "/" ? "general" : category}
         darkMode={darkModeStatus}

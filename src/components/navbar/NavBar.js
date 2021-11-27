@@ -102,7 +102,9 @@ export class NavBar extends Component {
                 <li className="nav-item" style={{ marginLeft: "32px" }}>
                   <button
                     type="button"
-                    className={`btn-sm btn-${!darkModeStatus ? "dark" : "light"}`}
+                    className={`btn-sm btn-${
+                      !darkModeStatus ? "dark" : "light"
+                    }`}
                     onClick={this.darkModeEnable}
                   >
                     {darkModeStatus ? "Go Light Mode" : "Go Dark Mode"}

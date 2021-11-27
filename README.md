@@ -82,6 +82,12 @@ Go to: http://localhost:3000/ to interact with the App.
   
  @wojtekmaj/enzyme-adapter-react-17 for adapter in react 17
  
+ ### helpful VSCode extensions for testing
+ 
+ Jest
+ 
+ Jest Runner
+ 
  ### Useful testing link
   
   https://jestjs.io/docs/tutorial-react

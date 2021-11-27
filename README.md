@@ -105,4 +105,6 @@ import 'regenerator-runtime/runtime'; in setupTests.js file or just directly imp
   https://stackoverflow.com/questions/32070303/uncaught-referenceerror-react-is-not-defined
   
   https://stackoverflow.com/questions/42535270/regeneratorruntime-is-not-defined-when-running-jest-test
+  
+  https://stackoverflow.com/questions/45867095/test-react-component-method-is-calling-function-pass-as-a-prop
 

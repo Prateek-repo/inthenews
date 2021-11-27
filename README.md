@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# Getting Started with the project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Download/Clone the file to your local environment.
 
-## Available Scripts
+Run yarn install
 
-In the project directory, you can run:
+Make an account in NewsAPI and generate the API key.
 
-### `yarn start`
+Make one file named as '.env.local' in the root folder and write the API key using REACT_APP_NEWSAPIKEY="yourAPIKey", save it.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Run `yarn start` in the root file.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Go to: http://localhost:3000/ to interact with the App.
 
-### `yarn test`
+# Technologies used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**React v17.0.2**
 
-### `yarn build`
+**Bootstrap v5.1.x**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**News API**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Search news categories
 
-### `yarn eject`
+<div align = "center">
+<img src='https://user-images.githubusercontent.com/63186643/143578990-6b9f6221-acf1-4589-9834-40e027a8ce26.PNG' height="640" width="1200"/>
+</div>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Capture](https://user-images.githubusercontent.com/63186643/143579291-4180bcf7-a34c-4b81-9f2e-9ee5edd30fed.PNG)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Search news by countires (up to 52 countries)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![Capture](https://user-images.githubusercontent.com/63186643/143579528-e036ee74-92ae-407a-8199-cec79d8583bf.PNG)
 
-## Learn More
+![Capture](https://user-images.githubusercontent.com/63186643/143579884-9dc777d0-e081-44f4-b6ab-8e86d9072bcf.PNG)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Infinite Scroll in the news
 
-### Code Splitting
+![Screenshot (2296)](https://user-images.githubusercontent.com/63186643/143580515-ea384d19-d570-4ec7-8720-45b74c0d494d.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Dark mode
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Capture](https://user-images.githubusercontent.com/63186643/143580748-3afb2966-2c2b-4bb6-a1c9-44f209e73446.PNG)
 
-### Making a Progressive Web App
+![Capture](https://user-images.githubusercontent.com/63186643/143580841-1c84c28e-466e-4f0a-8383-91ba1a60eaab.PNG)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Responsive Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+![localhost_3000_health(iPhone 6_7_8 Plus)](https://user-images.githubusercontent.com/63186643/143582738-86bce5be-bc77-4e7d-a60f-5646a8bf5de1.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `yarn build` fails to minify
+![localhost_3000_health(iPhone 6_7_8 Plus) (1)](https://user-images.githubusercontent.com/63186643/143582749-7c4be6c6-2f54-499b-8c44-7331ba503420.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+![localhost_3000_health(iPad)](https://user-images.githubusercontent.com/63186643/143582757-4cb245c9-53aa-4501-bef8-14ec2ca2569d.png)
+
+
+![localhost_3000_health(iPad) (1)](https://user-images.githubusercontent.com/63186643/143582768-37220f92-bd3a-4dc8-a86e-aa0aacac815f.png)
+
+
+# App Testing
+
+## Installation
+
+  ### As Dev Dependencies
+  Jest and (configured babel.config.js file as well)
+  
+  Enzyme
+  
+  enzyme-to-json (for snapshot)
+  
+  identity-obj-proxy (to help to mock the .png, css files etc while testing + created a fileMock.js file + added jest ModuleNameMapper for this.)
+  
+  created babel.config.js file to solve 'jsx' issue  (https://stackoverflow.com/questions/63005011/support-for-the-experimental-syntax-jsx-isnt-currently-enabled'> Support for )
+  
+ @wojtekmaj/enzyme-adapter-react-17 for adapter in react 17
+ 
+ regenerator-runtime `yarn add regenerator-runtime --dev` to solve 
+ Issue: `ReferenceError: regeneratorRuntime is not defined` in the files where I am using async await in the function + imported import 'core-js/stable'; 
+import 'regenerator-runtime/runtime'; in setupTests.js file or just directly import it in the test case file you are facing issue.
+ 
+ ### helpful VSCode extensions for testing
+ 
+ Jest
+ 
+ Jest Runner
+ 
+ ### Useful testing link
+  
+  https://jestjs.io/docs/tutorial-react
+  
+  https://enzymejs.github.io/enzyme/docs/guides/jest.html
+  
+  https://stackoverflow.com/questions/55341289/configure-enzyme-to-json-with-jest
+  
+  https://stackoverflow.com/questions/63005011/support-for-the-experimental-syntax-jsx-isnt-currently-enabled
+  
+  https://stackoverflow.com/questions/32070303/uncaught-referenceerror-react-is-not-defined
+  
+  https://stackoverflow.com/questions/42535270/regeneratorruntime-is-not-defined-when-running-jest-test
+  
+  https://stackoverflow.com/questions/45867095/test-react-component-method-is-calling-function-pass-as-a-prop
+

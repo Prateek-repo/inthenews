@@ -65,3 +65,32 @@ Go to: http://localhost:3000/ to interact with the App.
 ![localhost_3000_health(iPad) (1)](https://user-images.githubusercontent.com/63186643/143582768-37220f92-bd3a-4dc8-a86e-aa0aacac815f.png)
 
 
+# App Testing
+
+## Installation
+
+  ### As Dev Dependencies
+  Jest and (configured babel.config.js file as well)
+  
+  Enzyme
+  
+  enzyme-to-json (for snapshot)
+  
+  identity-obj-proxy (to help to mock the .png, css files etc while testing + created a fileMock.js file + added jest ModuleNameMapper for this.)
+  
+  created babel.config.js file to solve 'jsx' issue  (<a href= https://stackoverflow.com/questions/63005011/support-for-the-experimental-syntax-jsx-isnt-currently-enabled'> Support for the experimental syntax 'jsx' isn't currently enabled
+</a>)
+ @wojtekmaj/enzyme-adapter-react-17 for adapter in react 17
+ 
+ ### Useful testing link
+  
+  https://jestjs.io/docs/tutorial-react
+  
+  https://enzymejs.github.io/enzyme/docs/guides/jest.html
+  
+  https://stackoverflow.com/questions/55341289/configure-enzyme-to-json-with-jest
+  
+  https://stackoverflow.com/questions/63005011/support-for-the-experimental-syntax-jsx-isnt-currently-enabled
+  
+  https://stackoverflow.com/questions/32070303/uncaught-referenceerror-react-is-not-defined
+

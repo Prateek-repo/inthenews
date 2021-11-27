@@ -25,7 +25,7 @@ Go to: http://localhost:3000/ to interact with the App.
 ## Search news categories
 
 <div align = "center">
-<img src='https://user-images.githubusercontent.com/63186643/143578990-6b9f6221-acf1-4589-9834-40e027a8ce26.PNG' height="640" width="1200"/>
+<img src='https://user-images.githubusercontent.com/63186643/143578990-6b9f6221-acf1-4589-9834-40e027a8ce26.PNG' height="600" width="400"/>
 </div>
 
 ![Capture](https://user-images.githubusercontent.com/63186643/143579291-4180bcf7-a34c-4b81-9f2e-9ee5edd30fed.PNG)
@@ -78,7 +78,7 @@ Go to: http://localhost:3000/ to interact with the App.
   
   identity-obj-proxy (to help to mock the .png, css files etc while testing + created a fileMock.js file + added jest ModuleNameMapper for this.)
   
-  created babel.config.js file to solve 'jsx' issue  (https://stackoverflow.com/questions/63005011/support-for-the-experimental-syntax-jsx-isnt-currently-enabled'> Support for )
+  created babel.config.js file to solve 'jsx' issue  (https://stackoverflow.com/questions/63005011/support-for-the-experimental-syntax-jsx-isnt-currently-enabled')
   
  @wojtekmaj/enzyme-adapter-react-17 for adapter in react 17
  

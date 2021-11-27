@@ -25,7 +25,7 @@ Go to: http://localhost:3000/ to interact with the App.
 ## Search news categories
 
 <div align = "center">
-<img src='https://user-images.githubusercontent.com/63186643/143578990-6b9f6221-acf1-4589-9834-40e027a8ce26.PNG' height="1200" width="800"/>
+<img src='https://user-images.githubusercontent.com/63186643/143578990-6b9f6221-acf1-4589-9834-40e027a8ce26.PNG'/>
 </div>
 
 ![Capture](https://user-images.githubusercontent.com/63186643/143579291-4180bcf7-a34c-4b81-9f2e-9ee5edd30fed.PNG)
@@ -58,15 +58,20 @@ Go to: http://localhost:3000/ to interact with the App.
 <div align='center'>
   <img src='https://user-images.githubusercontent.com/63186643/143582738-86bce5be-bc77-4e7d-a60f-5646a8bf5de1.png' height='800' width='450'/>
   </div>
+  
+  <div align='center'>
+  <img src='https://user-images.githubusercontent.com/63186643/143582749-7c4be6c6-2f54-499b-8c44-7331ba503420.png' height='450' width='800'/>
+  </div>
+  
+  <div align='center'>
+  <img src='https://user-images.githubusercontent.com/63186643/143582757-4cb245c9-53aa-4501-bef8-14ec2ca2569d.png'  height='800' width='450'/>
+  </div>
+  
+  <div align='center'>
+  <img src='https://user-images.githubusercontent.com/63186643/143582768-37220f92-bd3a-4dc8-a86e-aa0aacac815f.png' height='450' width='800'/>
+  </div>
 
 
-![localhost_3000_health(iPhone 6_7_8 Plus) (1)](https://user-images.githubusercontent.com/63186643/143582749-7c4be6c6-2f54-499b-8c44-7331ba503420.png)
-
-
-![localhost_3000_health(iPad)](https://user-images.githubusercontent.com/63186643/143582757-4cb245c9-53aa-4501-bef8-14ec2ca2569d.png)
-
-
-![localhost_3000_health(iPad) (1)](https://user-images.githubusercontent.com/63186643/143582768-37220f92-bd3a-4dc8-a86e-aa0aacac815f.png)
 
 
 # App Testing

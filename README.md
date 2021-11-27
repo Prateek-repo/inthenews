@@ -39,7 +39,7 @@ Go to: http://localhost:3000/ to interact with the App.
 &nbsp;
 
 
-## Search news by countires (up to 52 countries)
+## Search news by countries (up to 52 countries)
 
 ![Capture](https://user-images.githubusercontent.com/63186643/143579528-e036ee74-92ae-407a-8199-cec79d8583bf.PNG)
 

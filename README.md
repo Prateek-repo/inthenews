@@ -82,6 +82,10 @@ Go to: http://localhost:3000/ to interact with the App.
   
  @wojtekmaj/enzyme-adapter-react-17 for adapter in react 17
  
+ regenerator-runtime `yarn add regenerator-runtime --dev` to solve 
+ Issue: `ReferenceError: regeneratorRuntime is not defined` in the files where I am using async await in the function + imported import 'core-js/stable'; 
+import 'regenerator-runtime/runtime'; in setupTests.js file or just directly import it in the test case file you are facing issue.
+ 
  ### helpful VSCode extensions for testing
  
  Jest
@@ -99,4 +103,6 @@ Go to: http://localhost:3000/ to interact with the App.
   https://stackoverflow.com/questions/63005011/support-for-the-experimental-syntax-jsx-isnt-currently-enabled
   
   https://stackoverflow.com/questions/32070303/uncaught-referenceerror-react-is-not-defined
+  
+  https://stackoverflow.com/questions/42535270/regeneratorruntime-is-not-defined-when-running-jest-test
 

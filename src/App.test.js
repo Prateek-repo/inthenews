@@ -1,56 +1,46 @@
-import {shallow, configure} from 'enzyme'
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
-import toJson from 'enzyme-to-json';
+import { shallow, configure } from "enzyme";
+import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
+import toJson from "enzyme-to-json";
 import LoadingBar from "react-top-loading-bar";
 
-import App from './App';
+import App from "./App";
 
-
-let wrapper
 configure({ adapter: new Adapter() });
 
-wrapper = shallow(
-  <App/>
-)
+describe("<App/>", () => {
+  let wrapper;
 
-
-describe('<App/>', () => {
-
-  it('SnapShot creation', () => {
-  
+  beforeEach(() => {
+    wrapper = shallow(<App />);
+  });
+  it("SnapShot creation", () => {
     expect(toJson(wrapper)).toMatchSnapshot();
+  });
 
-  })
-
-  it('handling setProgress', () => {
+  it("handling setProgress", () => {
     const componentInstance = wrapper.instance();
     componentInstance.setProgress(10);
-    expect(componentInstance.state.progress).toEqual(10)
+    expect(componentInstance.state.progress).toEqual(10);
+  });
 
-  })
-
-  it('handling setCountry', () => {
+  it("handling setCountry", () => {
     const componentInstance = wrapper.instance();
-    componentInstance.setCountry('in');
-    expect(componentInstance.state.country).toEqual('in')
+    componentInstance.setCountry("in");
+    expect(componentInstance.state.country).toEqual("in");
+  });
 
-  })
-
-  it('handling darkModeEnable', () => {
+  it("handling darkModeEnable", () => {
     wrapper.setState({
-      darkModeStatus: true
-    })
+      darkModeStatus: true,
+    });
     const componentInstance = wrapper.instance();
     componentInstance.darkModeEnable();
-    expect(componentInstance.state.darkModeStatus).toEqual(false)
+    expect(componentInstance.state.darkModeStatus).toEqual(false);
+  });
 
-  })
-
-  it('should be handling LoadingBar', () => {
-    wrapper.find(LoadingBar).props().onLoaderFinished()
+  it("should be handling LoadingBar", () => {
+    wrapper.find(LoadingBar).props().onLoaderFinished();
     const componentInstance = wrapper.instance();
-    expect(componentInstance.state.progress).toEqual(0)
-  })
-
-  
-})
+    expect(componentInstance.state.progress).toEqual(0);
+  });
+});

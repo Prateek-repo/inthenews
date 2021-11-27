@@ -4,20 +4,21 @@ import toJson from "enzyme-to-json";
 import Container from "../News";
 import fetchMock from "jest-fetch-mock";
 
-let wrapper;
-
-const defaultProps = {
-  progressBar: jest.fn()
-}
-
-beforeEach(() => {
-  wrapper = shallow(<Container {...defaultProps}/>);
-});
-
-afterAll(() => {
-  jest.clearAllMocks();
-});
 describe("<News/>", () => {
+  let wrapper;
+
+  const defaultProps = {
+    progressBar: jest.fn(),
+  };
+
+  beforeEach(() => {
+    wrapper = shallow(<Container {...defaultProps} />);
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it("SnapShot creation", () => {
     expect(toJson(wrapper)).toMatchSnapshot();
   });
@@ -58,16 +59,22 @@ describe("<News/>", () => {
     expect(wrapper).toBeTruthy();
   });
 
-  it('Return score', async () => {
+  it("Return score", async () => {
+    wrapper.setState({
+      articles: [{ n: "" }, { n: "" }],
+    });
     fetchMock.resetMocks();
-    fetchMock.mockResponseOnce(JSON.stringify({
-      result: [
-        {
-          title: 'JSpace Rocket',
-          description: '',
-        }],
-    }));
-     await wrapper.instance().getMoreNews();
-    expect(wrapper.instance().state.loading).toEqual(true);
+    fetchMock.mockResponseOnce(
+      JSON.stringify({
+        result: [
+          {
+            title: "JSpace Rocket",
+            description: "",
+          },
+        ],
+      })
+    );
+    await wrapper.instance().getMoreNews();
+    expect(wrapper.instance().state.loading).toEqual(false);
   });
 });

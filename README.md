@@ -49,29 +49,48 @@ Go to: http://localhost:3000/ to interact with the App.
 
 ![Capture](https://user-images.githubusercontent.com/63186643/143580841-1c84c28e-466e-4f0a-8383-91ba1a60eaab.PNG)
 
+&nbsp;
+&nbsp;
+&nbsp;
 
 ## Responsive Design
 
 
-![localhost_3000_health(iPhone 6_7_8 Plus)](https://user-images.githubusercontent.com/63186643/143582738-86bce5be-bc77-4e7d-a60f-5646a8bf5de1.png)
+&nbsp;
+&nbsp;
+&nbsp;
 
 <div align='center'>
   <img src='https://user-images.githubusercontent.com/63186643/143582738-86bce5be-bc77-4e7d-a60f-5646a8bf5de1.png' height='800' width='450'/>
   </div>
   
+  &nbsp;
+&nbsp;
+&nbsp;
+  
   <div align='center'>
   <img src='https://user-images.githubusercontent.com/63186643/143582749-7c4be6c6-2f54-499b-8c44-7331ba503420.png' height='450' width='800'/>
   </div>
   
+  &nbsp;
+&nbsp;
+&nbsp;
+  
   <div align='center'>
-  <img src='https://user-images.githubusercontent.com/63186643/143582757-4cb245c9-53aa-4501-bef8-14ec2ca2569d.png'  height='800' width='450'/>
+  <img src='https://user-images.githubusercontent.com/63186643/143582757-4cb245c9-53aa-4501-bef8-14ec2ca2569d.png'  height='1200' width='800'/>
   </div>
   
+  &nbsp;
+&nbsp;
+&nbsp;
+
   <div align='center'>
   <img src='https://user-images.githubusercontent.com/63186643/143582768-37220f92-bd3a-4dc8-a86e-aa0aacac815f.png' height='450' width='800'/>
   </div>
 
-
+&nbsp;
+&nbsp;
+&nbsp;
 
 
 # App Testing

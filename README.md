@@ -25,7 +25,7 @@ Go to: http://localhost:3000/ to interact with the App.
 ## Search news categories
 
 <div align = "center">
-<img src='https://user-images.githubusercontent.com/63186643/143578990-6b9f6221-acf1-4589-9834-40e027a8ce26.PNG' height="600" width="400"/>
+<img src='https://user-images.githubusercontent.com/63186643/143578990-6b9f6221-acf1-4589-9834-40e027a8ce26.PNG' height="1200" width="800"/>
 </div>
 
 ![Capture](https://user-images.githubusercontent.com/63186643/143579291-4180bcf7-a34c-4b81-9f2e-9ee5edd30fed.PNG)
@@ -54,6 +54,10 @@ Go to: http://localhost:3000/ to interact with the App.
 
 
 ![localhost_3000_health(iPhone 6_7_8 Plus)](https://user-images.githubusercontent.com/63186643/143582738-86bce5be-bc77-4e7d-a60f-5646a8bf5de1.png)
+
+<div align='center'>
+  <img src='https://user-images.githubusercontent.com/63186643/143582738-86bce5be-bc77-4e7d-a60f-5646a8bf5de1.png' height='800' width='450'/>
+  </div>
 
 
 ![localhost_3000_health(iPhone 6_7_8 Plus) (1)](https://user-images.githubusercontent.com/63186643/143582749-7c4be6c6-2f54-499b-8c44-7331ba503420.png)

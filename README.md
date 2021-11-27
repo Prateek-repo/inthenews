@@ -1,3 +1,12 @@
+# Table of Contents
+
+[Heading](#heading)
+[Heading](#heading-1)
+[Heading](#heading-2)
+[Heading](#heading-3)
+[Heading](#heading-4)
+
+
 # Getting Started with the project
 
 Download/Clone the file to your local environment.

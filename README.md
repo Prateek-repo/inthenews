@@ -137,13 +137,13 @@ Go to: http://localhost:3000/ to interact with the App.
  Issue: `ReferenceError: regeneratorRuntime is not defined` in the files where I am using async await in the function + imported import 'core-js/stable'; 
 import 'regenerator-runtime/runtime'; in setupTests.js file or just directly import it in the test case file you are facing issue.
  
- ### Helpful VSCode extensions for testing
+ ## Helpful VSCode extensions for testing
  
  Jest
  
  Jest Runner
  
- ### Useful testing links
+ ## Useful testing links
   
   https://jestjs.io/docs/tutorial-react
   

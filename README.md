@@ -22,12 +22,8 @@ Go to: http://localhost:3000/ to interact with the App.
 
 # Features
 &nbsp;
-&nbsp;
-&nbsp;
 
 ## Search news categories
-&nbsp;
-&nbsp;
 &nbsp;
 
 <div align = "center">
@@ -46,10 +42,8 @@ Go to: http://localhost:3000/ to interact with the App.
 
 
 ## Search news by countires (up to 52 countries)
+&nbsp;
 
-&nbsp;
-&nbsp;
-&nbsp;
 
 ![Capture](https://user-images.githubusercontent.com/63186643/143579528-e036ee74-92ae-407a-8199-cec79d8583bf.PNG)
 
@@ -66,8 +60,7 @@ Go to: http://localhost:3000/ to interact with the App.
 
 ## Infinite Scroll in the news
 &nbsp;
-&nbsp;
-&nbsp;
+
 
 ![Screenshot (2296)](https://user-images.githubusercontent.com/63186643/143580515-ea384d19-d570-4ec7-8720-45b74c0d494d.png)
 
@@ -78,8 +71,7 @@ Go to: http://localhost:3000/ to interact with the App.
 ## Dark mode
 
 &nbsp;
-&nbsp;
-&nbsp;
+
 
 ![Capture](https://user-images.githubusercontent.com/63186643/143580748-3afb2966-2c2b-4bb6-a1c9-44f209e73446.PNG)
 

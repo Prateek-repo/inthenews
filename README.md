@@ -22,7 +22,7 @@ Go to: http://localhost:3000/ to interact with the App.
 
 # Features
 
-## Search news categories
+## Search news by categories
 
 <div align = "center">
 <img src='https://user-images.githubusercontent.com/63186643/143578990-6b9f6221-acf1-4589-9834-40e027a8ce26.PNG'/>

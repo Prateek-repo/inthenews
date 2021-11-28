@@ -5,11 +5,16 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 
 export default class App extends Component {
-  state = {
-    progress: 0,
-    country: "in",
-    darkModeStatus: false,
-  };
+
+  constructor(){
+    super()
+    this.state = {
+      progress: 0,
+      country: "in",
+      darkModeStatus: false,
+    };
+  }
+ 
 
   setProgress = (theBarProgress) => {
     this.setState({

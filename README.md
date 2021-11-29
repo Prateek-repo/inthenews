@@ -16,7 +16,7 @@ Go to: http://localhost:3000/ to interact with the App.
 
 **React v17.0.2**
 
-**Bootstrap v5.1.x**
+**Bootstrap v5.1**
 
 **News API**
 
